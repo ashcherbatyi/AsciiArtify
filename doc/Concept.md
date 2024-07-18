@@ -89,50 +89,50 @@ Below is a step-by-step demonstration of using kind with Docker to deploy a "Hel
 ### Steps
 
 1. **Install kind:**
-   \`\`\`bash
+   ```bash
    go install sigs.k8s.io/kind@v0.23.0
    export PATH=\$PATH:/root/go/bin
-   \`\`\`
+   ```
 
 2. **Create a simple configuration file for kind:**
-   \`\`\`bash
+   ```bash
    cat <<EOF >> kind-config.yaml
    kind: Cluster
    apiVersion: kind.x-k8s.io/v1alpha4
    nodes:
    - role: control-plane
    EOF
-   \`\`\`
+   ```
 
 3. **Create a cluster with kind:**
-   \`\`\`bash
+   ```bash
    kind create cluster --config kind-config.yaml --name demo
-   \`\`\`
+   ```
 
 4. **Verify the cluster is created:**
-   \`\`\`bash
+   ```bash
    kind get clusters
-   \`\`\`
+   ```
 
 5. **Create a deployment for the "Hello World" application:**
-   \`\`\`bash
+   ```bash
    kubectl create deployment hello-world --image=gcr.io/google-samples/hello-app:1.0
-   \`\`\`
+   ```
 
 6. **Expose the deployment to create a LoadBalancer service:**
-   \`\`\`bash
+   ```bash
    kubectl expose deployment hello-world --type=LoadBalancer --port=8080
-   \`\`\`
+   ```
 
 8. **Get the services to check the LoadBalancer status:**
-   \`\`\`bash
+   ```bash
    kubectl get services
-   \`\`\`
+   ```
 
 9. **Forward the port to access the application:**
-   \`\`\`bash
+   ```bash
    kubectl port-forward service/hello-world 8080:8080
-   \`\`\`
+   ```
 
 ![Image](/data/demo.gif)
 
