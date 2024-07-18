@@ -81,7 +81,7 @@ Podman is a daemonless container engine for developing, managing, and running OC
 
 ## Demonstration
 
-![Image](.data/demo.gif)
+![Image](/data/demo.gif)
 
 ## Conclusion
 
