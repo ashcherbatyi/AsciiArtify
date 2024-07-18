@@ -79,6 +79,8 @@ Podman is a daemonless container engine for developing, managing, and running OC
 - Smaller community compared to Docker
 - Some learning curve for users familiar with Docker
 
+## Demonstration
+
 ## Conclusion
 
 Based on the analysis, here are the recommendations for the PoC:
@@ -88,6 +90,3 @@ Based on the analysis, here are the recommendations for the PoC:
 - **K3d**: Recommended for its efficiency and speed. It is especially suitable for those looking for a minimal and fast Kubernetes setup. The use of k3s makes it resource-efficient.
 
 For the PoC of AsciiArtify, **Kind with Podman** is recommended due to its lightweight nature, speed of deployment, and efficient resource usage. It provides a good balance between performance and simplicity, making it ideal for a small startup environment.
-
-
-## Demonstration
